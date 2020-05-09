@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MQTT ovladač</title>
+  <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/materia-flat-lightning/24/020_022_led_diode_light_emitting_luminodiode-512.png" type="image/png" >
+  <link rel="stylesheet" href="style.css">
+  <script src="mqttws31.js" type="text/javascript"></script>
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main">
+    <h1>Ovládání IoT zařízení</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Název</th>
+        <th>Majitel</th>
+        <th>Spojení</th>
+        <th>Stav</th>
+        <th>Ovládání</th>
+      </tr>
+      <tr id="iot0">
+        <td>0</td>
+        <td>LED páska</td>
+        <td>Vlna</td>
+        <td id="connection-0">&#9679;</td>
+        <td id="state-0"></td>
+        <td><input type="color" id="color-input"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="chat">
+    <div class="chat-messages" >
+      <div id="chat-messages">
+      </div>
+    </div>
+    <form id="chat" class="chat-input-area" action="">
+      <input type="text" placeholder="Napište zprávu" id="chat-input" class="chat-input">
+      <input type="submit" value="Odeslat" class="chat-submit">
+    </form>
+  </div>
+  <footer>Tato služba má 0% zabezpečení, neposílejte citlivé údaje. <br>
+  Zdrojový kód je dostupný na <a href="https://github.com/otavlna/" target="_blank">githubu</a>.</footer>
+</body>
+</html>
